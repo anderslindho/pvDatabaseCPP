@@ -138,9 +138,10 @@ class ChannelRequesterImpl : public ChannelRequester
 {
 private:
     Event event;
-    bool connected = false;
+    bool connected;
 
 public:
+    ChannelRequesterImpl() : connected(false) {}
 
     virtual string getRequesterName()
     {
